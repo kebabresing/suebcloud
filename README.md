@@ -2,7 +2,7 @@
 
 **Akhmad Zamri Ardani | 202310370311406**
 
-_Proyek ini dibuat sebagai tugas mata kuliah Pemrograman Web C._
+**Proyek ini dibuat sebagai tugas mata kuliah Pemrograman Web C.**
 
 **Universitas Muhammadiyah Malang**
 
@@ -88,6 +88,7 @@ Saat form berhasil submit, pesan akan ditambahkan ke `messages.txt` di folder pr
 Silakan modifikasi dan kembangkan sesuai kebutuhan.
 
 ---
+
 
 
 
