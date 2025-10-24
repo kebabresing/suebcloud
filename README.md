@@ -35,17 +35,20 @@ Sueb Space adalah landing page sederhana yang menggabungkan markup statis (HTML)
 - Interaksi: `main.js` (vanilla JS with jQuery-friendly patterns).
 - Backend/demo: `contact.php` (PHP built-in usage supported).
 
-## Struktur Proyek
+## 📁Struktur Proyek
 ```
-e:/PRAKTIKUM/PEMROGRAMAN WEB/Sueb
- index.html
- about.html
- contact.php
- style.css
- main.js
- assets/
-    logo.svg
-    akhmad.svg
+Sueb/
+│
+├── index.html          # Halaman utama
+├── about.html          # Halaman About
+├── contact.php         # Form kontak (PHP)
+│
+├── style.css           # Gaya kustom
+├── main.js             # Logika interaktif client-side
+│
+└── assets/
+    ├── logo.svg
+    ├── akhmad.svg
 ```
 
 ## Menjalankan secara lokal
@@ -81,6 +84,10 @@ Saat form berhasil submit, pesan akan ditambahkan ke `messages.txt` di folder pr
 - WhatsApp demo number (dipakai di beberapa tautan): `6287735372986`  ganti sesuai kebutuhan.
 - Pemilik / kontak proyek: Akhmad Zamri Ardani.
 
+- Proyek ini bersifat open-source dan dapat digunakan untuk keperluan pembelajaran atau pengembangan web dasar.
+Silakan modifikasi dan kembangkan sesuai kebutuhan.
+
 ---
+
 
 
