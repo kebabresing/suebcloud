@@ -20,6 +20,7 @@ Sueb Space adalah landing page sederhana yang menggabungkan markup statis (HTML)
 - [Rekomendasi produksi](#rekomendasi-produksi)
 - [Rencana pengembangan](#rencana-pengembangan)
 - [Kontak & Catatan](#kontak--catatan)
+- [Lisensi] (lisensi)
 
 ---
 
@@ -85,6 +86,7 @@ Saat form berhasil submit, pesan akan ditambahkan ke `messages.txt` di folder pr
 Silakan modifikasi dan kembangkan sesuai kebutuhan.
 
 ---
+
 
 
 
