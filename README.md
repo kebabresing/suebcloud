@@ -1,6 +1,6 @@
 ﻿# Sueb Space  Landing Page (Tugas Pemrograman Web C)
 
-**Pemilik:** Akhmad Zamri Ardani | 202310370311406
+**Akhmad Zamri Ardani | 202310370311406**
 
 ## Deskripsi singkat
 Proyek ini adalah sebuah landing page bernama "Sueb Space" yang dibuat sebagai bagian dari tugas mata kuliah Pemrograman Web C. Tujuannya adalah memperagakan praktik front-end dasar (HTML/CSS/JS) dan back-end ringan (PHP) dalam konteks halaman pemasaran sederhana.
@@ -60,4 +60,5 @@ php -S 127.0.0.1:8000
 
 ---
 README ini telah disusun ulang dan dirapikan agar profesional, serta mencantumkan nama pemilik dan tujuan penggunaan sebagai tugas Pemrograman Web C.
+
 
