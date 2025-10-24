@@ -74,7 +74,7 @@ Saat form berhasil submit, pesan akan ditambahkan ke `messages.txt` di folder pr
 - Tempatkan penyimpanan pesan di luar webroot dan lindungi aksesnya.
 - Terapkan HTTPS, sanitasi/validasi input, dan rate-limiting / CAPTCHA untuk formulir.
 
-## Rencana pengembangan (opsional)
+## Rencana pengembangan
 - Integrasi email/SMTP (PHPMailer).
 - Migrasi pesan ke SQLite/MySQL + halaman admin.
 - Tambah halaman Privacy & Terms.
@@ -85,6 +85,7 @@ Saat form berhasil submit, pesan akan ditambahkan ke `messages.txt` di folder pr
 Silakan modifikasi dan kembangkan sesuai kebutuhan.
 
 ---
+
 
 
 
