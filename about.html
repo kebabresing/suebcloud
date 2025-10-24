@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Sueb Space</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/logo.svg">
+  <meta name="theme-color" content="#3b82f6">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Header (reuse structure) -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200" role="banner">
+    <nav class="container mx-auto px-4 py-4" aria-label="Navigasi utama">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2" aria-label="Sueb Space — beranda">
+          <img src="assets/logo.svg" alt="Sueb Space" width="32" height="32" loading="lazy">
+          <span class="text-xl font-bold">Sueb Space</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-gray-600 hover:text-gray-900 transition">Home</a>
+          <a href="about.html" class="text-gray-600 hover:text-gray-900 transition">About</a>
+          <a href="https://wa.me/6287735372986?text=Halo%20Sueb%20Space%2C%20saya%20ingin%20info%20lebih%20lanjut" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition">Contact</a>
+        </div>
+
+        <div class="hidden md:flex items-center gap-4">
+          <button class="px-4 py-2 text-gray-600 hover:text-gray-900 transition">Masuk</button>
+          <button class="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:opacity-90 transition">Mulai Gratis</button>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Buka menu mobile" aria-controls="mobile-menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="mobile-menu md:hidden">
+        <div class="flex flex-col gap-4 pt-4 pb-2">
+          <a href="index.html" class="text-gray-600 hover:text-gray-900 transition py-2">Home</a>
+          <a href="about.html" class="text-gray-600 hover:text-gray-900 transition py-2">About</a>
+          <a href="https://wa.me/6287735372986?text=Halo%20Sueb%20Space%2C%20saya%20ingin%20info%20lebih%20lanjut" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition py-2">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- About hero (improved) -->
+  <section class="pt-28 pb-12 px-4 bg-gradient-to-b from-white via-slate-50 to-gray-50">
+    <div class="container mx-auto max-w-6xl">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="text-center md:text-left">
+          <p class="inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-4">Tentang Kami</p>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">Membangun infrastruktur cloud yang mudah, andal, dan aman untuk developer modern.</h1>
+          <p class="text-lg text-gray-600 mb-6">Sueb Space membantu tim pengembang meluncurkan, mengelola, dan mengamankan aplikasi mereka tanpa kerepotan. Fokus kami pada developer experience membuat kerja Anda lebih cepat dan lebih aman.</p>
+
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center sm:items-start">
+            <a href="index.html#harga" class="inline-flex items-center px-5 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg shadow hover:opacity-95 transition">Mulai Gratis</a>
+            <a href="https://wa.me/6287735372986?text=Halo%20Sueb%20Space%2C%20saya%20ingin%20info%20lebih%20lanjut" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-3 border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-100 transition">Hubungi Kami</a>
+          </div>
+
+          <div class="mt-8 grid sm:grid-cols-3 gap-4">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold">U</div>
+              <div>
+                <h4 class="font-semibold">User-first</h4>
+                <p class="text-sm text-gray-500">Antarmuka dan API yang ramah developer.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center font-bold">S</div>
+              <div>
+                <h4 class="font-semibold">Skalabilitas</h4>
+                <p class="text-sm text-gray-500">Mudah naik skala sesuai kebutuhan aplikasi Anda.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 bg-green-100 text-green-600 rounded-lg flex items-center justify-center font-bold">K</div>
+              <div>
+                <h4 class="font-semibold">Keamanan</h4>
+                <p class="text-sm text-gray-500">Enkripsi dan kontrol akses sesuai best-practice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-first md:order-last">
+          <!-- Decorative illustration / logo -->
+          <div class="mx-auto max-w-md bg-white rounded-2xl shadow-lg p-6">
+            <img src="assets/logo.svg" alt="Sueb Space" class="w-28 h-28 mx-auto mb-4">
+            <p class="text-center text-gray-600">Platform cloud sederhana untuk developer yang ingin fokus membangun fitur, bukan infrastruktur.</p>
+            <div class="mt-6 grid grid-cols-2 gap-3">
+              <div class="p-3 bg-blue-50 rounded-lg text-center">
+                <div class="text-2xl font-bold">99.99%</div>
+                <div class="text-xs text-gray-500">Uptime</div>
+              </div>
+              <div class="p-3 bg-green-50 rounded-lg text-center">
+                <div class="text-2xl font-bold"><span class="">%</span></div>
+                <div class="text-xs text-gray-500">SLA</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values & Team -->
+  <section class="py-12 px-4">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold">Nilai Inti Kami</h2>
+        <p class="text-gray-600">Kami percaya pada kecepatan, keamanan, dan kolaborasi. Setiap fitur kami dibangun untuk mendukung developer sehari-hari.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-10">
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+          <h3 class="font-semibold mb-2">Developer Experience</h3>
+          <p class="text-gray-500 text-sm">API yang jernih, dokumentasi lengkap, dan tooling yang membantu tim Anda bergerak cepat.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+          <h3 class="font-semibold mb-2">Observability</h3>
+          <p class="text-gray-500 text-sm">Logs, metrics, dan traces untuk memudahkan troubleshooting dan optimasi.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+          <h3 class="font-semibold mb-2">Compliance</h3>
+          <p class="text-gray-500 text-sm">Kami mendukung praktik keamanan dan kepatuhan yang relevan untuk perusahaan.</p>
+        </div>
+      </div>
+
+      <div class="text-center mb-6">
+        <h3 class="text-2xl font-bold">Tim Kami</h3>
+        <p class="text-gray-600">Engineer dan builder yang antusias membangun pengalaman developer terbaik.</p>
+      </div>
+
+      <div class="grid place-items-center">
+        <div class="max-w-sm w-full">
+          <div class="bg-white p-6 rounded-2xl text-center border border-gray-100 mx-auto">
+            <img src="assets/akhmad.jpg" alt="Akhmad Zamri Ardani" class="w-20 h-20 rounded-full mx-auto object-cover mb-4" loading="lazy" onerror="this.onerror=null;this.src='assets/akhmad.svg'">
+            <div class="font-semibold">Akhmad Zamri Ardani</div>
+            <div class="text-xs text-gray-500">Founder</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA strip -->
+  <section class="py-8 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+    <div class="container mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <h4 class="text-lg font-bold">Mulai membangun dengan Sueb Space</h4>
+        <p class="text-sm opacity-90">Daftar sekarang dan dapatkan akses ke semua fitur selama masa percobaan.</p>
+      </div>
+      <div class="flex gap-3">
+        <a href="index.html#harga" class="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold">Lihat Harga</a>
+        <a href="https://wa.me/6287735372986?text=Halo%20Sueb%20Space%2C%20saya%20ingin%20info%20lebih%20lanjut" target="_blank" rel="noopener noreferrer" class="border border-white/30 px-4 py-2 rounded-lg">Chat WA</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12 px-4">
+      <div class="container mx-auto max-w-6xl text-center">
+        <p class="text-sm text-gray-400">© 2025 Sueb Space — Akhmad Zamri Ardani</p>
+      </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
