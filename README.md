@@ -80,11 +80,12 @@ Saat form berhasil submit, pesan akan ditambahkan ke `messages.txt` di folder pr
 - Tambah halaman Privacy & Terms.
 - Tambah image assets resmi (`assets/akhmad.jpg`) bila tersedia.
 
-
+## Lisensi
 - Proyek ini bersifat open-source dan dapat digunakan untuk keperluan pembelajaran atau pengembangan web dasar.
 Silakan modifikasi dan kembangkan sesuai kebutuhan.
 
 ---
+
 
 
 
