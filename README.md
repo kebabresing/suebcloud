@@ -80,14 +80,12 @@ Saat form berhasil submit, pesan akan ditambahkan ke `messages.txt` di folder pr
 - Tambah halaman Privacy & Terms.
 - Tambah image assets resmi (`assets/akhmad.jpg`) bila tersedia.
 
-## Kontak & Catatan
-- WhatsApp demo number (dipakai di beberapa tautan): `6287735372986`  ganti sesuai kebutuhan.
-- Pemilik / kontak proyek: Akhmad Zamri Ardani.
 
 - Proyek ini bersifat open-source dan dapat digunakan untuk keperluan pembelajaran atau pengembangan web dasar.
 Silakan modifikasi dan kembangkan sesuai kebutuhan.
 
 ---
+
 
 
 
