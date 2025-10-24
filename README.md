@@ -1,71 +1,83 @@
-🌌 Sueb Space – Landing Page
+#  🌌 Sueb Space  Landing Page
 
-Akhmad Zamri Ardani
-Tugas Pemrograman Web C – Universitas XYZ
+**Akhmad Zamri Ardani | 202310370311406
+Universitas Muhammadiyah Malang**
 
-Deskripsi Singkat
+_Proyek ini dibuat sebagai tugas mata kuliah Pemrograman Web C._
 
-Sueb Space adalah landing page sederhana yang dibuat menggunakan HTML, Tailwind CSS, JavaScript, dan PHP.
-Tujuannya untuk mempraktikkan konsep front-end dan back-end dasar dalam konteks halaman pemasaran modern.
+---
 
-Fitur Utama
+## Ringkasan
+Sueb Space adalah landing page sederhana yang menggabungkan markup statis (HTML), utilitas Tailwind CSS, interaksi ringan di client (JavaScript), dan endpoint kontak sederhana dengan PHP. Tujuannya: menunjukkan praktik front-end dasar dan backend minimal untuk keperluan tugas dan demo.
 
-Struktur multi-halaman: index.html, about.html, contact.php
+## Daftar Isi
+- [Fitur utama](#fitur-utama)
+- [Teknologi](#teknologi)
+- [Struktur proyek](#struktur-proyek)
+- [Menjalankan secara lokal](#menjalankan-secara-lokal)
+- [Pengujian form kontak (PHP)](#pengujian-form-kontak-php)
+- [Rekomendasi produksi](#rekomendasi-produksi)
+- [Rencana pengembangan](#rencana-pengembangan)
+- [Kontak & Catatan](#kontak--catatan)
 
-Hero section dan tampilan tim pada halaman About
+---
 
-Logo SVG terpusat (assets/logo.svg) juga digunakan sebagai favicon
+## Fitur Utama
+- Multi-halaman: `index.html`, `about.html`, `contact.php`.
+- Halaman About yang telah diperbarui (hero, nilai inti, kartu tim  menampilkan pemilik).
+- Kontak: form AJAX + endpoint PHP yang menyimpan pesan ke `messages.txt` (demo).
+- Interaksi: smooth-scroll, reveal-on-scroll, back-to-top, dan CTA yang mengarah ke WhatsApp.
+- Responsive: layout dibuat dengan Tailwind CSS.
 
-Form kontak dengan validasi dan penyimpanan pesan di messages.txt
+## Teknologi
+- Frontend: HTML, Tailwind CSS (CDN), custom `style.css`.
+- Interaksi: `main.js` (vanilla JS with jQuery-friendly patterns).
+- Backend/demo: `contact.php` (PHP built-in usage supported).
 
-Efek interaktif: smooth scroll & reveal on scroll
+## Struktur Proyek
+```
+e:/PRAKTIKUM/PEMROGRAMAN WEB/Sueb
+ index.html
+ about.html
+ contact.php
+ style.css
+ main.js
+ assets/
+    logo.svg
+    akhmad.svg
+```
 
-Desain responsif dengan Tailwind CSS
+## Menjalankan secara lokal
+1. Buka file statis langsung (double-click) untuk melihat `index.html` atau `about.html` tanpa server.
 
-Teknologi
+2. Untuk menguji form kontak (PHP) jalankan server built-in dari folder proyek (PowerShell):
 
-Frontend: HTML, Tailwind CSS, JavaScript
-
-Backend: PHP (untuk form kontak)
-
-Assets: SVG, optional JPEG avatar
-
-📁 Struktur Proyek
-Sueb/
-│
-├── index.html          # Halaman utama
-├── about.html          # Halaman About
-├── contact.php         # Form kontak (PHP)
-│
-├── style.css           # Gaya kustom
-├── main.js             # Logika interaktif client-side
-│
-└── assets/
-    ├── logo.svg
-    ├── akhmad.svg
-    └── akhmad.jpg (opsional)
-
-    🚀 Menjalankan Secara Lokal
-
-Buka index.html langsung di browser untuk melihat tampilan statis.
-
-Untuk menguji form kontak:
-
+```powershell
+Set-Location -Path 'e:\PRAKTIKUM\PEMROGRAMAN WEB\Sueb'
 php -S 127.0.0.1:8000
+```
 
-lalu buka http://127.0.0.1:8000/contact.php
+Lalu buka: http://127.0.0.1:8000/contact.php
 
-Rekomendasi Produksi
+Saat form berhasil submit, pesan akan ditambahkan ke `messages.txt` di folder proyek.
 
-Gunakan database atau layanan email (misal PHPMailer + SMTP)
-Tempatkan file data di luar webroot
-Aktifkan HTTPS untuk keamanan
-Tambahkan validasi dan sanitasi input lebih ketat
+## Pengujian dan Debugging
+- Jika form tidak terkirim, lihat DevTools  Console / Network untuk respons server.
+- Jika jQuery CDN gagal, `main.js` memiliki fallback ke fetch/vanilla. Untuk produksi, host dependensi yang stabil.
 
-Rencana Pengembangan
+## Rekomendasi Produksi
+- Jangan menyimpan data produksi di file teks  gunakan database atau layanan email (PHPMailer + SMTP).
+- Tempatkan penyimpanan pesan di luar webroot dan lindungi aksesnya.
+- Terapkan HTTPS, sanitasi/validasi input, dan rate-limiting / CAPTCHA untuk formulir.
 
-Integrasi email notifikasi dengan PHPMailer
-Migrasi pesan ke SQLite/MySQL
-Tambah halaman Privacy Policy & Terms of Service
+## Rencana pengembangan (opsional)
+- Integrasi email/SMTP (PHPMailer).
+- Migrasi pesan ke SQLite/MySQL + halaman admin.
+- Tambah halaman Privacy & Terms.
+- Tambah image assets resmi (`assets/akhmad.jpg`) bila tersedia.
 
-Lisensi: Bebas digunakan untuk keperluan pembelajaran atau pengembangan web dasar.
+## Kontak & Catatan
+- WhatsApp demo number (dipakai di beberapa tautan): `6287735372986`  ganti sesuai kebutuhan.
+- Pemilik / kontak proyek: Akhmad Zamri Ardani.
+
+---
