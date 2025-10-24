@@ -2,9 +2,9 @@
 
 **Akhmad Zamri Ardani | 202310370311406**
 
-**Universitas Muhammadiyah Malang**
-
 _Proyek ini dibuat sebagai tugas mata kuliah Pemrograman Web C._
+
+**Universitas Muhammadiyah Malang**
 
 ---
 
@@ -20,7 +20,7 @@ Sueb Space adalah landing page sederhana yang menggabungkan markup statis (HTML)
 - [Rekomendasi produksi](#rekomendasi-produksi)
 - [Rencana pengembangan](#rencana-pengembangan)
 - [Kontak & Catatan](#kontak--catatan)
-- [Lisensi] (lisensi)
+- [Lisensi] (#lisensi)
 
 ---
 
@@ -86,6 +86,7 @@ Saat form berhasil submit, pesan akan ditambahkan ke `messages.txt` di folder pr
 Silakan modifikasi dan kembangkan sesuai kebutuhan.
 
 ---
+
 
 
 
