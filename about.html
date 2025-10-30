@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Sueb Space</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/logo.svg">
+  <meta name="theme-color" content="#3b82f6">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Header (reuse structure) -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200" role="banner">
+    <nav class="container mx-auto px-4 py-4" aria-label="Navigasi utama">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2" aria-label="Sueb Space — beranda">
+          <img src="assets/logo.svg" alt="Sueb Space" width="32" height="32" loading="lazy">
+          <span class="text-xl font-bold">Sueb Space</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8" role="navigation" aria-label="Menu utama">
+          <a href="index.html#fitur" class="text-gray-600 hover:text-gray-900 transition">Fitur</a>
+          <a href="index.html#harga" class="text-gray-600 hover:text-gray-900 transition">Harga</a>
+          <a href="about.html" class="text-gray-900 font-semibold transition" aria-current="page">Tentang Kami</a>
+          <a href="index.html#faq" class="text-gray-600 hover:text-gray-900 transition">FAQ</a>
+          <a href="https://wa.me/6287735372986?text=Halo%20Sueb%20Space%2C%20saya%20ingin%20info%20lebih%20lanjut" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition">Kontak</a>
+        </div>
+
+        <div class="hidden md:flex items-center gap-4">
+          <button class="px-4 py-2 text-gray-600 hover:text-gray-900 transition">Masuk</button>
+          <button class="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:opacity-90 transition to-pricing">
+            Mulai Gratis
+          </button>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Buka menu mobile" aria-controls="mobile-menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="mobile-menu md:hidden" aria-label="Menu mobile">
+        <div class="flex flex-col gap-4 pt-4 pb-2">
+          <a href="index.html#fitur" class="text-gray-600 hover:text-gray-900 transition py-2">Fitur</a>
+          <a href="index.html#harga" class="text-gray-600 hover:text-gray-900 transition py-2">Harga</a>
+          <a href="about.html" class="text-gray-900 font-semibold transition py-2" aria-current="page">Tentang Kami</a>
+          <a href="index.html#faq" class="text-gray-600 hover:text-gray-900 transition py-2">FAQ</a>
+          <a href="https://wa.me/6287735372986?text=Halo%20Sueb%20Space%2C%20saya%20ingin%20info%20lebih%20lanjut" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition py-2">Kontak</a>
+          <button class="px-4 py-2 text-gray-600 hover:text-gray-900 transition text-left">Masuk</button>
+          <button class="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:opacity-90 transition to-pricing">
+            Mulai Gratis
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="pt-20 md:pt-24 pb-20 px-4 bg-gradient-to-b from-white via-slate-50 to-gray-50">
+      <div class="container mx-auto max-w-6xl">
+        <div class="grid gap-12 md:grid-cols-[1.05fr_0.95fr] items-center">
+          <div class="space-y-6 text-center md:text-left">
+            <span class="inline-flex items-center justify-center gap-2 bg-blue-50 text-blue-600 px-4 py-1 rounded-full text-sm font-medium">
+              <span class="h-2 w-2 rounded-full bg-blue-400"></span>
+              Tentang Kami
+            </span>
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+              Membangun infrastruktur cloud yang mudah, andal, dan aman untuk developer modern.
+            </h1>
+            <p class="text-lg text-gray-600 md:max-w-2xl md:leading-relaxed mx-auto md:mx-0">
+              Sueb Space membantu tim pengembang meluncurkan, mengelola, dan mengamankan aplikasi mereka tanpa kerepotan. Kami menciptakan platform yang memprioritaskan developer experience sehingga tim Anda dapat fokus pada inovasi.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
+              <a href="index.html#harga" class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg shadow-lg hover:opacity-95 transition font-semibold to-pricing">
+                Mulai Gratis
+              </a>
+              <a href="https://wa.me/6287735372986?text=Halo%20Sueb%20Space%2C%20saya%20ingin%20info%20lebih%20lanjut" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-100 transition font-semibold">
+                Hubungi Kami
+              </a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+              <div class="p-4 bg-white/80 backdrop-blur rounded-xl border border-gray-100 shadow-sm text-left">
+                <div class="text-xs font-semibold uppercase tracking-wide text-blue-500">Uptime</div>
+                <div class="text-2xl font-bold text-gray-900 mt-1">99.99%</div>
+                <p class="text-xs text-gray-500 mt-2">Dipantau 24/7 oleh tim SRE kami.</p>
+              </div>
+              <div class="p-4 bg-white/80 backdrop-blur rounded-xl border border-gray-100 shadow-sm text-left">
+                <div class="text-xs font-semibold uppercase tracking-wide text-purple-500">Deploy</div>
+                <div class="text-2xl font-bold text-gray-900 mt-1">&lt; 5 Menit</div>
+                <p class="text-xs text-gray-500 mt-2">Pipeline otomatis dari git ke produksi.</p>
+              </div>
+              <div class="p-4 bg-white/80 backdrop-blur rounded-xl border border-gray-100 shadow-sm text-left">
+                <div class="text-xs font-semibold uppercase tracking-wide text-green-500">Region</div>
+                <div class="text-2xl font-bold text-gray-900 mt-1">12+</div>
+                <p class="text-xs text-gray-500 mt-2">Jaringan global DigitalOcean terintegrasi.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="absolute -top-8 -right-6 hidden md:block w-24 h-24 bg-blue-100 rounded-full blur-2xl opacity-70"></div>
+            <div class="absolute -bottom-10 -left-10 hidden md:block w-28 h-28 bg-purple-100 rounded-full blur-2xl opacity-60"></div>
+            <div class="relative bg-white/90 border border-gray-100 rounded-3xl shadow-xl p-6 md:p-8">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center shadow">
+                  <img src="assets/logo.svg" alt="Sueb Space" class="w-8 h-8">
+                </div>
+                <div>
+                  <p class="text-sm uppercase tracking-wide text-blue-500 font-semibold">Misi Kami</p>
+                  <p class="text-lg font-semibold text-gray-900">Developer-first Cloud</p>
+                </div>
+              </div>
+              <p class="text-sm text-gray-600 leading-relaxed mb-6">
+                “Kami percaya bahwa platform cloud harus membantu developer berkreasi, bukan menghambat. Karena itu kami fokus pada otomatisasi, keamanan, dan dukungan yang responsif.”
+              </p>
+              <ul class="space-y-3 text-sm text-gray-600">
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-blue-500"></span>
+                  Automasi CI/CD, observability, dan skalabilitas out-of-the-box.
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-purple-500"></span>
+                  Keamanan terpasang: enkripsi, backup, dan kontrol akses granular.
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-green-500"></span>
+                  Tim support engineer siap membantu 24/7 di setiap region.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-4 bg-white">
+      <div class="container mx-auto max-w-6xl">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nilai Inti Kami</h2>
+          <p class="text-lg text-gray-600">Kami merancang setiap fitur dengan fokus pada performa, keamanan, dan kemudahan kolaborasi agar tim Anda dapat berkembang lebih cepat.</p>
+        </div>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="bg-gray-50 border border-gray-100 rounded-2xl p-6 shadow-sm">
+            <div class="w-11 h-11 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Developer Experience</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">API yang jelas, dokumentasi yang hidup, dan tooling yang membuat rilis berjalan dalam hitungan menit.</p>
+          </article>
+
+          <article class="bg-gray-50 border border-gray-100 rounded-2xl p-6 shadow-sm">
+            <div class="w-11 h-11 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2a4 4 0 014-4h2a4 4 0 014 4v2m-6-6a4 4 0 01-4-4 4 4 0 118 0 4 4 0 01-4 4z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Observability Modern</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Logs, metrics, dan traces terpadu membantu tim Anda menangani insiden dengan cepat.</p>
+          </article>
+
+          <article class="bg-gray-50 border border-gray-100 rounded-2xl p-6 shadow-sm">
+            <div class="w-11 h-11 rounded-lg bg-green-100 text-green-600 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Keamanan & Kepatuhan</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Enkripsi menyeluruh, audit trail otomatis, dan kontrol akses berbasis peran untuk kebutuhan enterprise.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-4 bg-gray-50">
+      <div class="container mx-auto max-w-6xl">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tim Inti Kami</h2>
+          <p class="text-lg text-gray-600">Tim engineer dan builder yang antusias menghadirkan pengalaman infrastruktur terbaik untuk komunitas developer Indonesia.</p>
+        </div>
+
+        <div class="mt-12 grid justify-items-center">
+          <article class="bg-white border border-gray-100 rounded-3xl shadow-md p-8 max-w-md text-center">
+            <img src="assets/akhmad.jpg" alt="Akhmad Zamri Ardani" class="w-24 h-24 rounded-full mx-auto object-cover mb-4" loading="lazy" onerror="this.onerror=null;this.src='assets/akhmad.svg'">
+            <h3 class="text-xl font-semibold text-gray-900">Akhmad Zamri Ardani</h3>
+            <p class="text-sm text-blue-600 font-medium">Founder &amp; CTO</p>
+            <p class="text-sm text-gray-600 mt-4 leading-relaxed">Berpengalaman membangun platform cloud-native dan SRE practice di perusahaan teknologi. Fokus pada skalabilitas dan keandalan layanan.</p>
+            <div class="mt-5 flex items-center justify-center gap-3">
+              <a href="mailto:hello@suebspace.id" class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-50 text-blue-600 hover:bg-blue-100 transition" aria-label="Email Sueb Space">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m0 0l4 4m-4-4l4-4m8 8V8a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2z" />
+                </svg>
+              </a>
+              <a href="https://wa.me/6287735372986?text=Halo%20Sueb%20Space%2C%20saya%20ingin%20info%20lebih%20lanjut" target="_blank" rel="noopener noreferrer" class="w-9 h-9 flex items-center justify-center rounded-full bg-green-50 text-green-600 hover:bg-green-100 transition" aria-label="WhatsApp Sueb Space">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.52 3.48A11.78 11.78 0 0012 0a11.8 11.8 0 00-10.19 17.64L0 24l6.56-1.78A11.8 11.8 0 0012 23.6h.01A11.79 11.79 0 0024 11.8a11.72 11.72 0 00-3.48-8.32zM12 21.2a9.4 9.4 0 01-4.79-1.31l-.34-.2-3.9 1.06 1.04-3.8-.22-.38A9.41 9.41 0 1121.4 11.8 9.42 9.42 0 0112 21.2zm5.18-7.06c-.28-.14-1.64-.81-1.9-.9s-.44-.14-.63.14-.72.9-.88 1.08-.33.21-.61.07a7.63 7.63 0 01-2.24-1.38 8.49 8.49 0 01-1.57-1.95c-.16-.28 0-.43.12-.57s.28-.33.42-.5.19-.28.29-.47a.52.52 0 000-.5c-.08-.14-.63-1.5-.86-2.05s-.46-.47-.63-.48h-.54a1 1 0 00-.72.34 3 3 0 00-.94 2.19 5.21 5.21 0 001.1 2.78 12 12 0 004.23 3.92 14.47 14.47 0 003.26 1.21 2.78 2.78 0 001.82-.29 2.24 2.24 0 001-1.41 1.85 1.85 0 00-.12-1.02c-.21-.42-.76-.67-1.04-.81z" />
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 flex items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 transition" aria-label="LinkedIn">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM8.339 18.339H5.661V9h2.678v9.339zM7 7.661a1.554 1.554 0 110-3.108 1.554 1.554 0 010 3.108zm11.339 10.678h-2.678v-4.56c0-1.087-.02-2.485-1.515-2.485-1.516 0-1.748 1.183-1.748 2.405v4.64h-2.678V9h2.571v1.276h.036c.357-.675 1.231-1.387 2.533-1.387 2.711 0 3.212 1.784 3.212 4.102v5.348z" />
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+  <footer id="kontak" class="bg-gray-900 text-white py-16 px-4" role="contentinfo">
+    <div class="container mx-auto max-w-6xl">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div class="flex items-center gap-2 mb-4" aria-label="Logo Sueb Space">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="8" fill="url(#footer-logo-gradient)"/>
+              <path d="M12 10L16 14L12 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 10L20 14L16 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                  <stop stop-color="#3b82f6"/>
+                  <stop offset="1" stop-color="#8b5cf6"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <span class="text-xl font-bold">Sueb Space</span>
+          </div>
+          <p class="text-gray-400 text-sm">Platform cloud terpercaya untuk developer modern.</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Produk</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="index.html#fitur" class="hover:text-white transition">Fitur</a></li>
+            <li><a href="index.html#harga" class="hover:text-white transition">Harga</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Perusahaan</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="about.html" aria-current="page" class="hover:text-white transition">Tentang Kami</a></li>
+            <li><a href="https://wa.me/6287735372986?text=Halo%20Sueb%20Space%2C%20saya%20ingin%20info%20lebih%20lanjut" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-sm text-gray-400">© 2025 Sueb Space. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="text-gray-400 hover:text-white transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
