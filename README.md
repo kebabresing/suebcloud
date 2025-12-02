@@ -1,102 +1,142 @@
-#  🌌 Sueb Space  Landing Page
+# 🌌 Sueb Cloud Platform
 
-**Akhmad Zamri Ardani | 202310370311406**
-
-**Proyek ini dibuat sebagai tugas mata kuliah Pemrograman Web C.**
-
-**Universitas Muhammadiyah Malang**
+**Akhmad Zamri Ardani | 202310370311406**  
+Pemrograman Web C – Universitas Muhammadiyah Malang
 
 ---
 
 ## Ringkasan
-Sueb Space adalah landing page sederhana yang menggabungkan markup statis (HTML), utilitas Tailwind CSS, interaksi ringan di client (JavaScript), dan endpoint kontak sederhana dengan PHP. Tujuannya: menunjukkan praktik front-end dasar dan backend minimal untuk keperluan tugas dan demo.
+Repositori ini sekarang terdiri dari dua bagian:
 
-**Demo online: https://kebabresing.github.io/suebcloud/**
+1. **Landing page statis** (`index.html`, `about.html`, `contact.php`) untuk kebutuhan presentasi front-end.
+2. **REST API Laravel** (`suebcloud-backend/`) yang menyediakan CRUD `stored_files` lengkap dengan database MySQL, validasi request, Postman collection, dan file `.http` untuk demo.
 
+Fokus tugas terbaru adalah memastikan backend meme
+nuhi requirement:
 
-## Daftar Isi
-- [Fitur utama](#fitur-utama)
-- [Teknologi](#teknologi)
-- [Struktur proyek](#struktur-proyek)
-- [Menjalankan secara lokal](#menjalankan-secara-lokal)
-- [Pengujian form kontak (PHP)](#pengujian-form-kontak-php)
-- [Rekomendasi produksi](#rekomendasi-produksi)
-- [Rencana pengembangan](#rencana-pengembangan)
-- [Kontak & Catatan](#kontak--catatan)
+- Tabel database khusus (`stored_files`) dengan tipe data terdefinisi.
+- 5 endpoint utama (Get All + pagination/filter, Get Detail, Create, Update, Delete).
+- Dokumentasi request melalui Postman collection dan file HTTP.
 
 ---
 
-## Fitur Utama
-- Multi-halaman: `index.html`, `about.html`, `contact.php`.
-- Halaman About yang telah diperbarui (hero, nilai inti, kartu tim  menampilkan pemilik).
-- Kontak: form AJAX + endpoint PHP yang menyimpan pesan ke `messages.txt` (demo).
-- Interaksi: smooth-scroll, reveal-on-scroll, back-to-top, dan CTA yang mengarah ke WhatsApp.
-- Integrasi API publik: widget status DigitalOcean dengan data real-time (global & per region) melalui Fetch API.
-- Responsive: layout dibuat dengan Tailwind CSS.
+## Daftar Isi
+- [Struktur Project](#struktur-project)
+- [Frontend Ringkas](#frontend-ringkas)
+- [Backend API](#backend-api)
+- [Menjalankan Backend](#menjalankan-backend)
+- [Dokumentasi & Demo](#dokumentasi--demo)
+- [Migrasi ke Mesin Lain](#migrasi-ke-mesin-lain)
+- [Catatan Tambahan](#catatan-tambahan)
 
-## Teknologi
-- Frontend: HTML, Tailwind CSS (CDN), custom `style.css`.
-- Interaksi: `main.js` (vanilla JS with jQuery-friendly patterns).
-- Backend/demo: `contact.php` (PHP built-in usage supported).
+---
 
-## 📁Struktur Proyek
+## Struktur Project
 ```
-Sueb/
-│
-├── index.html          # Halaman utama
-├── about.html          # Halaman About
-├── contact.php         # Form kontak (PHP)
-│
-├── style.css           # Gaya kustom
-├── main.js             # Logika interaktif client-side
-│
-└── assets/
-    ├── logo.svg
-    ├── akhmad.svg
+├── index.html / about.html / contact.php
+├── assets/ , main.js , style.css
+├── docs/
+│   ├── postman/suebcloud.postman_collection.json
+│   └── requests/stored-files.http
+└── suebcloud-backend/
+    ├── app/
+    │   ├── Http/Controllers/StoredFileController.php
+    │   ├── Http/Requests/StoreStoredFileRequest.php
+    │   └── Http/Requests/UpdateStoredFileRequest.php
+    ├── database/migrations/2025_11_30_000000_create_stored_files_table.php
+    ├── routes/api.php
+    └── ... (struktur standar Laravel 11)
 ```
 
-## Menjalankan secara lokal
-1. Buka file statis langsung (double-click) untuk melihat `index.html` atau `about.html` tanpa server.
+---
 
-2. Untuk menguji form kontak (PHP) jalankan server built-in dari folder proyek (PowerShell):
+## Frontend Ringkas
+- Multi-halaman dengan Tailwind CDN dan interaksi ringan via `main.js`.
+- Form kontak `contact.php` dapat diuji dengan server PHP built-in.
+- Widget status DigitalOcean tetap aktif untuk menunjukkan integrasi API publik.
 
+Menjalankan front-end lokal:
 ```powershell
-Set-Location -Path 'e:\PRAKTIKUM\PEMROGRAMAN WEB\Sueb'
-php -S 127.0.0.1:8000
+Set-Location -Path 'e:\PRAKTIKUM\PEMROGRAMAN WEB\suebcloud'
+php -S 127.0.0.1:8000   # hanya bila ingin menguji contact.php
 ```
+Buka `index.html` / `about.html` langsung di browser untuk melihat landing page.
 
-Lalu buka: http://127.0.0.1:8000/contact.php
+---
 
-Saat form berhasil submit, pesan akan ditambahkan ke `messages.txt` di folder proyek.
+## Backend API
+### Tabel `stored_files`
+Migrasi `database/migrations/2025_11_30_000000_create_stored_files_table.php` membuat kolom:
 
-## Integrasi Status DigitalOcean
-- Bagian "Status Infrastruktur Partner" pada `index.html` memuat data dari `https://status.digitalocean.com/api/v2/summary.json`.
-- Pengambilan data dilakukan menggunakan Fetch API di `main.js` tanpa membutuhkan API key.
-- Widget menampilkan:
-    - Banner status global (OK/Warning/Error) sesuai indikator dari DigitalOcean.
-    - Kartu operasional per region (NYC1, AMS3, dst) beserta jumlah layanan dan daftar gangguan aktif.
-    - Ringkasan insiden aktif serta jadwal pemeliharaan (jika ada).
-- Data insiden dan pemeliharaan diambil secara real-time dari endpoint `summary.json`, `incidents.json`, dan `scheduled-maintenances.json`.
-- Saat permintaan gagal, UI menampilkan pesan error ramah pengguna dan tidak mengganggu bagian lain dari halaman.
-- Untuk menguji secara lokal, cukup buka `index.html` di browser dan pastikan koneksi internet aktif.
+| Kolom        | Tipe                              | Keterangan                    |
+|--------------|-----------------------------------|--------------------------------|
+| `title`      | string(150)                       | Judul berkas                   |
+| `description`| text nullable                     | Deskripsi opsional             |
+| `category`   | enum `pribadi/kantor/kuliah/umum` | Kategori wajib                 |
+| `size_mb`    | unsignedInteger                   | Ukuran file dalam MB           |
+| `storage_path`| string                           | Lokasi penyimpanan             |
+| `mime_type`  | string(120)                       | MIME                           |
+| `is_public`  | boolean default false             | Status publik                  |
+| `expires_at` | timestamp nullable                | Kadaluwarsa opsional           |
+| `deleted_at` | softDeletes                       | Soft delete sesuai modul       |
 
-## Pengujian dan Debugging
-- Jika form tidak terkirim, lihat DevTools  Console / Network untuk respons server.
-- Jika jQuery CDN gagal, `main.js` memiliki fallback ke fetch/vanilla. Untuk produksi, host dependensi yang stabil.
+### Endpoint CRUD
+`routes/api.php` mendaftarkan `Route::apiResource('stored-files', StoredFileController::class)` sehingga tersedia:
 
-## Rekomendasi Produksi
-- Jangan menyimpan data produksi di file teks  gunakan database atau layanan email (PHPMailer + SMTP).
-- Tempatkan penyimpanan pesan di luar webroot dan lindungi aksesnya.
-- Terapkan HTTPS, sanitasi/validasi input, dan rate-limiting / CAPTCHA untuk formulir.
+| Endpoint | Deskripsi | Catatan |
+|----------|-----------|---------|
+| `GET /api/stored-files` | List dengan `limit`, `page`, `search`, `orderBy`, `sortBy`, `category`, `is_public` | Pagination via `paginate()` |
+| `GET /api/stored-files/{id}` | Detail file | 404 otomatis bila tidak ditemukan |
+| `POST /api/stored-files` | Create | Validasi via `StoreStoredFileRequest` |
+| `PUT /api/stored-files/{id}` | Update | Validasi via `UpdateStoredFileRequest` |
+| `DELETE /api/stored-files/{id}` | Soft delete | Field `deleted_at` terisi |
 
-## Rencana pengembangan
-- Integrasi email/SMTP (PHPMailer).
-- Migrasi pesan ke SQLite/MySQL + halaman admin.
-- Tambah halaman Privacy & Terms.
-- Tambah image assets resmi (`assets/akhmad.jpg`) bila tersedia.
+`StoredFileController` juga melakukan normalisasi `expires_at` menggunakan `preparePayload()`.
 
-## Lisensi
-- Proyek ini bersifat open-source dan dapat digunakan untuk keperluan pembelajaran atau pengembangan web dasar.
-Silakan modifikasi dan kembangkan sesuai kebutuhan.
+---
+
+## Menjalankan Backend
+```powershell
+cd e:\PRAKTIKUM\PEMROGRAMAN WEB\suebcloud\suebcloud-backend
+cp .env.example .env   # atau salin dari mesin lain
+composer install
+php artisan key:generate
+
+# Konfigurasi koneksi MySQL di .env
+php artisan migrate
+php artisan serve
+```
+API dapat diakses di `http://127.0.0.1:8000/api/stored-files` (atau host yang digunakan).
+
+---
+
+## Dokumentasi & Demo
+- **Postman**: impor `docs/postman/suebcloud.postman_collection.json`, set environment `base_url`. Semua 5 endpoint tersedia dengan contoh body.
+- **VS Code REST Client**: `docs/requests/stored-files.http` berisi request GET/POST/PUT/DELETE; ubah variabel `@storedFileId` sesuai kebutuhan.
+- **Validasi DB**: gunakan HeidiSQL/MySQL client untuk memeriksa tabel `stored_files`. Soft delete ditandai melalui kolom `deleted_at`.
+
+Workflow demo yang direkomendasikan:
+1. `GET /api/stored-files?limit=5&page=1&orderBy=created_at&sortBy=desc`
+2. `POST /api/stored-files` dengan payload contoh.
+3. `GET` detail ID yang baru dibuat.
+4. `PUT` untuk mengubah sebagian field.
+5. `DELETE` dan tunjukkan `deleted_at` terisi di database.
+
+---
+
+## Migrasi ke Mesin Lain
+1. Clone repo / copy folder ke laptop presentasi.
+2. Salin `.env` dan sesuaikan kredensial DB lokal.
+3. Jalankan `composer install`, `php artisan migrate` (atau import dump hasil export dari PC bila ingin data yang sama).
+4. Jalankan `php artisan serve` dan gunakan Postman collection yang sama.
+
+Data database tidak otomatis ikut saat menyalin repo; gunakan export/import SQL atau seed melalui API untuk membuat contoh record baru.
+
+---
+
+## Catatan Tambahan
+- Branch default di GitHub telah dipindah ke `main`. Gunakan `git push -u origin main` untuk update selanjutnya.
+- File sensitif seperti `.env` tidak naik ke GitHub; simpan secara lokal atau gunakan `.env.example` sebagai template.
+- Soft delete dipilih agar sesuai instruksi modul—baris akan hilang dari respon API, namun tetap terlihat di DB bila memeriksa kolom `deleted_at`.
 
 ---
