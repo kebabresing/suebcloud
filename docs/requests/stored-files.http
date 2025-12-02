@@ -1,0 +1,41 @@
+@baseUrl = http://127.0.0.1:8000
+@storedFileId = 1
+
+### Get Stored Files (with pagination)
+GET {{baseUrl}}/api/stored-files?limit=10&page=1&search=doc&orderBy=created_at&sortBy=desc
+Accept: application/json
+
+### Get Stored File Detail
+GET {{baseUrl}}/api/stored-files/{{storedFileId}}
+Accept: application/json
+
+### Create Stored File
+POST {{baseUrl}}/api/stored-files
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Proposal Akhir",
+  "description": "Draft terakhir proposal proyek.",
+  "category": "kuliah",
+  "size_mb": 24,
+  "storage_path": "/documents/proposal-akhir.pdf",
+  "mime_type": "application/pdf",
+  "is_public": true,
+  "expires_at": "2026-01-01T00:00:00Z"
+}
+
+### Update Stored File
+PUT {{baseUrl}}/api/stored-files/{{storedFileId}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Proposal Akhir v2",
+  "size_mb": 27,
+  "is_public": false
+}
+
+### Delete Stored File
+DELETE {{baseUrl}}/api/stored-files/{{storedFileId}}
+Accept: application/json

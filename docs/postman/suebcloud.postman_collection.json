@@ -1,0 +1,147 @@
+{
+  "info": {
+    "name": "SuebCloud API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Collection for SuebCloud file storage REST API."
+  },
+  "item": [
+    {
+      "name": "Get Stored Files (paginated)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/stored-files?limit=10&page=1&search=doc&orderBy=created_at&sortBy=desc",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "stored-files"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "search",
+              "value": "doc"
+            },
+            {
+              "key": "orderBy",
+              "value": "created_at"
+            },
+            {
+              "key": "sortBy",
+              "value": "desc"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Stored File Detail",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/stored-files/{{stored_file_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "stored-files",
+            "{{stored_file_id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Stored File",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Proposal Akhir\",\n    \"description\": \"Draft terakhir proposal proyek.\",\n    \"category\": \"kuliah\",\n    \"size_mb\": 24,\n    \"storage_path\": \"/documents/proposal-akhir.pdf\",\n    \"mime_type\": \"application/pdf\",\n    \"is_public\": true,\n    \"expires_at\": \"2026-01-01T00:00:00Z\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/stored-files",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "stored-files"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Stored File",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Proposal Akhir v2\",\n    \"size_mb\": 27,\n    \"is_public\": false\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/stored-files/{{stored_file_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "stored-files",
+            "{{stored_file_id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete Stored File",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/stored-files/{{stored_file_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "stored-files",
+            "{{stored_file_id}}"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost"
+    },
+    {
+      "key": "stored_file_id",
+      "value": "1"
+    }
+  ]
+}
